@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechNova — игровые компьютеры, ноутбуки, мониторы</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main>
+  <!-- HERO -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40 pb-16 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="reveal inline-block glass rounded-full px-4 py-1.5 text-sm text-cyan-300 mb-6">🔥 Новая коллекция 2026 — уже в наличии</span>
+      <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1]" data-delay="100">
+        Компьютеры, которые <span class="gradient-text">летают</span><br>
+        для <span class="text-cyan-300 caret" id="typing" data-words="игр|работы|учёбы|дизайна">игр</span>
+      </h1>
+      <p class="reveal mt-6 text-lg text-slate-300 max-w-xl" data-delay="200">Игровые ПК, ноутбуки, мониторы, клавиатуры, мыши и колонки. Гарантия, рассрочка и помощь в выборе — в магазине Бозори Корвон.</p>
+      <div class="reveal mt-8 flex flex-wrap gap-3 sm:gap-4" data-delay="300">
+        <a href="catalog.html" class="btn-primary pulse-ring rounded-2xl px-7 py-4 font-semibold">Смотреть каталог →</a>
+        <a id="heroWa" href="https://wa.me/992409022222" target="_blank" rel="noopener" class="btn-wa rounded-2xl px-7 py-4 font-semibold text-white">WhatsApp</a>
+      </div>
+      <div class="reveal mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-400" data-delay="400">
+        <span>🛡️ Гарантия до 3 лет</span><span>💳 Рассрочка 0%</span><span>🚚 Доставка по городу</span>
+      </div>
+    </div>
+
+    <!-- композиция с параллаксом -->
+    <div class="reveal-right relative h-[330px] sm:h-[470px]">
+      <div class="absolute inset-0 m-auto w-72 h-72 sm:w-[26rem] sm:h-[26rem] rounded-full border-2 border-dashed border-violet-500/40 spin-slow"></div>
+      <div class="absolute inset-0 m-auto w-48 h-48 sm:w-72 sm:h-72 rounded-full border border-cyan-400/30 spin-rev"></div>
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[55%] w-60 sm:w-[22rem] z-10"><div class="parallax" data-depth="26"><div class="floaty" data-show="tower,#8b5cf6,#22d3ee,0"></div></div></div>
+      <div class="absolute left-0 bottom-0 w-36 sm:w-60 z-20"><div class="parallax" data-depth="50"><div class="floaty" style="animation-delay:-1.5s" data-show="laptop,#ec4899,#f59e0b,1"></div></div></div>
+      <div class="absolute right-0 top-0 w-36 sm:w-60 z-20"><div class="parallax" data-depth="40"><div class="floaty" style="animation-delay:-3s" data-show="monitor,#06b6d4,#3b82f6,0"></div></div></div>
+      <span class="absolute top-10 left-2 glass rounded-2xl px-3 py-1.5 text-xs sm:text-sm floaty z-30">⚡ RTX 4090</span>
+      <span class="absolute bottom-10 right-2 glass rounded-2xl px-3 py-1.5 text-xs sm:text-sm floaty z-30" style="animation-delay:-2s">🚀 DDR5 64 ГБ</span>
+    </div>
+  </section>
+
+  <!-- БРЕНДЫ -->
+  <section class="border-y border-white/10 py-6 overflow-hidden bg-white/[0.02]">
+    <div class="marquee text-2xl font-extrabold text-slate-500 whitespace-nowrap">
+      <span class="px-8">ASUS</span><span class="px-8">LENOVO</span><span class="px-8">HP</span><span class="px-8">DELL</span><span class="px-8">ACER</span><span class="px-8">MSI</span><span class="px-8">LOGITECH</span><span class="px-8">NVIDIA</span><span class="px-8">INTEL</span><span class="px-8">AMD</span>
+      <span class="px-8">ASUS</span><span class="px-8">LENOVO</span><span class="px-8">HP</span><span class="px-8">DELL</span><span class="px-8">ACER</span><span class="px-8">MSI</span><span class="px-8">LOGITECH</span><span class="px-8">NVIDIA</span><span class="px-8">INTEL</span><span class="px-8">AMD</span>
+    </div>
+  </section>
+
+  <!-- КАТЕГОРИИ -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+    <div class="text-center mb-12 reveal"><h2 class="text-3xl sm:text-4xl font-extrabold">Выберите <span class="gradient-text">категорию</span></h2><p class="text-slate-400 mt-3">Всё для идеального рабочего и игрового места</p></div>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <a href="laptops.html" class="reveal glass card-glow spot rounded-3xl p-5 text-center"><div class="h-28 sm:h-36 floaty" data-show="laptop,#8b5cf6,#22d3ee,0"></div><h3 class="font-bold text-lg mt-3">Ноутбуки</h3><p class="text-sm text-slate-400">от $549</p></a>
+      <a href="gaming.html" class="reveal glass card-glow spot rounded-3xl p-5 text-center" data-delay="100"><div class="h-28 sm:h-36 floaty" style="animation-delay:-1s" data-show="tower,#ec4899,#8b5cf6,0"></div><h3 class="font-bold text-lg mt-3">Игровые ПК</h3><p class="text-sm text-slate-400">от $899</p></a>
+      <a href="monitors.html" class="reveal glass card-glow spot rounded-3xl p-5 text-center" data-delay="200"><div class="h-28 sm:h-36 floaty" style="animation-delay:-2s" data-show="monitor,#06b6d4,#3b82f6,1"></div><h3 class="font-bold text-lg mt-3">Мониторы</h3><p class="text-sm text-slate-400">от $159</p></a>
+      <a href="catalog.html?cat=keyboards" class="reveal glass card-glow spot rounded-3xl p-5 text-center"><div class="h-28 sm:h-36 floaty" style="animation-delay:-3s" data-show="keyboard,#22c55e,#06b6d4,0"></div><h3 class="font-bold text-lg mt-3">Клавиатуры</h3><p class="text-sm text-slate-400">от $69</p></a>
+      <a href="catalog.html?cat=mice" class="reveal glass card-glow spot rounded-3xl p-5 text-center" data-delay="100"><div class="h-28 sm:h-36 floaty" style="animation-delay:-4s" data-show="mouse,#f59e0b,#ef4444,0"></div><h3 class="font-bold text-lg mt-3">Мышки</h3><p class="text-sm text-slate-400">от $39</p></a>
+      <a href="audio.html" class="reveal glass card-glow spot rounded-3xl p-5 text-center" data-delay="200"><div class="h-28 sm:h-36 floaty" style="animation-delay:-5s" data-show="speakers,#a855f7,#22d3ee,0"></div><h3 class="font-bold text-lg mt-3">Колонки и звук</h3><p class="text-sm text-slate-400">от $49</p></a>
+    </div>
+  </section>
+
+  <!-- ХИТЫ -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-10 reveal">
+      <div><h2 class="text-3xl sm:text-4xl font-extrabold">Хиты <span class="gradient-text">продаж</span></h2><p class="text-slate-400 mt-2">Нажмите на товар, чтобы открыть его и заказать в WhatsApp</p></div>
+      <a href="catalog.html" class="text-cyan-300 hover:underline hidden sm:block">Весь каталог →</a>
+    </div>
+    <div data-products data-cat="featured" data-limit="4" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </section>
+
+  <!-- ПРОМО -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <div class="reveal relative overflow-hidden rounded-[2rem] glass p-8 sm:p-12 grid md:grid-cols-2 gap-8 items-center">
+      <div class="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-violet-600/30 blur-3xl"></div>
+      <div class="relative">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Соберём ПК <span class="gradient-text">под ваш бюджет</span></h2>
+        <p class="text-slate-300 mt-4">Расскажите, для чего нужен компьютер — игры, монтаж, учёба. Мы подберём комплектующие, соберём и протестируем 24 часа.</p>
+        <a href="https://wa.me/992409022222?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D0%9F%D0%9A" target="_blank" rel="noopener" class="btn-wa inline-block mt-6 rounded-2xl px-7 py-4 font-semibold text-white">Написать в WhatsApp</a>
+      </div>
+      <div class="relative h-48 sm:h-60 floaty" data-show="tower,#f59e0b,#ef4444,0"></div>
+    </div>
+  </section>
+
+  <!-- СТАТИСТИКА -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="glass rounded-[2rem] p-8 sm:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="reveal"><div class="text-4xl sm:text-5xl font-extrabold gradient-text" data-count="15000" data-suffix="+">0</div><p class="text-slate-400 mt-2 text-sm">довольных клиентов</p></div>
+      <div class="reveal" data-delay="100"><div class="text-4xl sm:text-5xl font-extrabold gradient-text" data-count="2500" data-suffix="+">0</div><p class="text-slate-400 mt-2 text-sm">товаров в наличии</p></div>
+      <div class="reveal" data-delay="200"><div class="text-4xl sm:text-5xl font-extrabold gradient-text" data-count="8" data-suffix=" лет">0</div><p class="text-slate-400 mt-2 text-sm">на рынке</p></div>
+      <div class="reveal" data-delay="300"><div class="text-4xl sm:text-5xl font-extrabold gradient-text" data-count="99" data-suffix="%">0</div><p class="text-slate-400 mt-2 text-sm">положительных отзывов</p></div>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <div class="text-center mb-12 reveal"><h2 class="text-3xl sm:text-4xl font-extrabold">Почему выбирают <span class="gradient-text">TechNova</span></h2></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal-left glass card-glow spot rounded-3xl p-6"><div class="w-14 h-14 rounded-2xl grad-bg flex items-center justify-center text-2xl mb-4">🛡️</div><h3 class="font-bold text-lg">Гарантия до 3 лет</h3><p class="text-slate-400 text-sm mt-2">Официальная гарантия и бесплатный сервис.</p></div>
+      <div class="reveal glass card-glow spot rounded-3xl p-6" data-delay="100"><div class="w-14 h-14 rounded-2xl grad-bg flex items-center justify-center text-2xl mb-4">🚚</div><h3 class="font-bold text-lg">Быстрая доставка</h3><p class="text-slate-400 text-sm mt-2">Привезём по городу в день заказа.</p></div>
+      <div class="reveal glass card-glow spot rounded-3xl p-6" data-delay="200"><div class="w-14 h-14 rounded-2xl grad-bg flex items-center justify-center text-2xl mb-4">💳</div><h3 class="font-bold text-lg">Рассрочка 0%</h3><p class="text-slate-400 text-sm mt-2">Без переплат и скрытых комиссий.</p></div>
+      <div class="reveal-right glass card-glow spot rounded-3xl p-6"><div class="w-14 h-14 rounded-2xl grad-bg flex items-center justify-center text-2xl mb-4">🧠</div><h3 class="font-bold text-lg">Помощь в выборе</h3><p class="text-slate-400 text-sm mt-2">Эксперты подберут технику под бюджет.</p></div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="text-center mb-12 reveal"><h2 class="text-3xl sm:text-4xl font-extrabold">Отзывы <span class="gradient-text">клиентов</span></h2></div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal glass card-glow spot rounded-3xl p-6"><div class="text-amber-400 mb-3">★★★★★</div><p class="text-slate-300 text-sm">«Взял игровой ПК — собрали аккуратно, всё проверили при мне. Работает отлично!»</p><p class="mt-4 font-semibold">Алишер К.</p></div>
+      <div class="reveal glass card-glow spot rounded-3xl p-6" data-delay="150"><div class="text-amber-400 mb-3">★★★★★</div><p class="text-slate-300 text-sm">«Помогли выбрать ноутбук для учёбы в рамках бюджета. Менеджер очень вежливый.»</p><p class="mt-4 font-semibold">Мадина Р.</p></div>
+      <div class="reveal glass card-glow spot rounded-3xl p-6" data-delay="300"><div class="text-amber-400 mb-3">★★★★★</div><p class="text-slate-300 text-sm">«Написал в WhatsApp, ответили за минуту. Купил монитор и клавиатуру — рекомендую.»</p><p class="mt-4 font-semibold">Фарход Д.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 pt-10">
+    <div class="reveal relative overflow-hidden rounded-[2rem] btn-primary p-10 sm:p-14 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Приезжайте или звоните!</h2>
+      <p class="mt-3 text-white/90">📍 Бозори Корвон, 3-дарвоза · 📞 +992 409 022 222</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="tel:+992409022222" class="bg-white text-slate-900 font-bold rounded-2xl px-8 py-4 hover:scale-105 transition">📞 Позвонить</a>
+        <a href="contacts.html" class="bg-slate-900/60 font-bold rounded-2xl px-8 py-4 hover:scale-105 transition">Как нас найти</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

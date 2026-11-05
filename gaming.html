@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Игровые компьютеры — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <section class="grid lg:grid-cols-2 gap-10 items-center mb-16">
+    <div>
+      <span class="reveal inline-block bg-pink-500/20 text-pink-300 rounded-full px-4 py-1.5 text-sm mb-4">🔥 Максимум FPS</span>
+      <h1 class="reveal text-4xl sm:text-5xl font-black" data-delay="100">Игровые <span class="gradient-text">компьютеры</span></h1>
+      <p class="reveal mt-5 text-slate-300 text-lg" data-delay="200">Играйте в 4K на ультра-настройках. Продуманное охлаждение, RGB-подсветка и процессоры последнего поколения. Каждый ПК тестируем 24 часа.</p>
+      <div class="reveal mt-6 space-y-4" data-delay="300">
+        <div><div class="flex justify-between text-sm mb-1"><span>Производительность в играх</span><span>98%</span></div><div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-2 rounded-full grad-bg" style="width:98%"></div></div></div>
+        <div><div class="flex justify-between text-sm mb-1"><span>Охлаждение и тишина</span><span>92%</span></div><div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-2 rounded-full grad-bg" style="width:92%"></div></div></div>
+      </div>
+    </div>
+    <div class="reveal-right flex justify-center"><div class="relative w-full max-w-sm"><div class="absolute inset-6 rounded-full bg-pink-600/30 blur-3xl"></div><div class="relative floaty" data-show="tower,#ec4899,#22d3ee,0"></div></div></div>
+  </section>
+  <div data-products data-cat="gaming" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

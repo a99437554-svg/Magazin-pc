@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Контакты — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <h1 class="reveal text-4xl sm:text-5xl font-black text-center">Свяжитесь <span class="gradient-text">с нами</span></h1>
+  <p class="reveal text-slate-400 text-center mt-4" data-delay="100">Ответим в WhatsApp в течение нескольких минут</p>
+
+  <section class="grid lg:grid-cols-2 gap-8 mt-14">
+    <div class="space-y-4">
+      <a href="tel:+992409022222" class="reveal-left glass card-glow spot rounded-2xl p-5 flex items-center gap-4"><div class="w-12 h-12 rounded-xl grad-bg flex items-center justify-center text-xl">📞</div><div><div class="font-semibold">Телефон</div><div class="text-sm text-slate-400">+992 409 022 222</div></div></a>
+      <a href="https://wa.me/992409022222" target="_blank" rel="noopener" class="reveal-left glass card-glow spot rounded-2xl p-5 flex items-center gap-4"><div class="w-12 h-12 rounded-xl bg-green-500 flex items-center justify-center text-xl">💬</div><div><div class="font-semibold">WhatsApp</div><div class="text-sm text-slate-400">Написать в WhatsApp →</div></div></a>
+      <div class="reveal-left glass card-glow spot rounded-2xl p-5 flex items-center gap-4"><div class="w-12 h-12 rounded-xl grad-bg flex items-center justify-center text-xl">📍</div><div><div class="font-semibold">Адрес</div><div class="text-sm text-slate-400">г. Душанбе, Бозори Корвон, 3-дарвоза</div></div></div>
+      <div class="reveal-left glass card-glow spot rounded-2xl p-5 flex items-center gap-4"><div class="w-12 h-12 rounded-xl grad-bg flex items-center justify-center text-xl">🕘</div><div><div class="font-semibold">Режим работы</div><div class="text-sm text-slate-400">Ежедневно с 09:00 до 21:00</div></div></div>
+      <div class="reveal-left glass rounded-2xl overflow-hidden h-64">
+        <iframe title="Карта" class="w-full h-full border-0" loading="lazy" src="https://www.google.com/maps?q=Bozori+Korvon+Dushanbe&output=embed"></iframe>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bozori+Korvon+Dushanbe" target="_blank" rel="noopener" class="reveal-left block text-center text-cyan-300 hover:underline text-sm">Открыть в Google Картах →</a>
+    </div>
+
+    <form data-wa class="reveal-right glass rounded-3xl p-6 sm:p-8 space-y-4 h-fit">
+      <h2 class="text-2xl font-bold mb-1">Напишите нам</h2>
+      <p class="text-sm text-slate-400 mb-2">Форма откроет WhatsApp с готовым сообщением</p>
+      <input required name="name" type="text" placeholder="Ваше имя" class="w-full bg-slate-900/70 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-violet-400 focus:shadow-[0_0_0_4px_rgba(139,92,246,.2)] transition">
+      <input required name="phone" type="tel" placeholder="Ваш телефон" class="w-full bg-slate-900/70 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-violet-400 focus:shadow-[0_0_0_4px_rgba(139,92,246,.2)] transition">
+      <select name="topic" class="w-full bg-slate-900/70 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-violet-400">
+        <option>Игровой компьютер</option><option>Ноутбук</option><option>Монитор</option><option>Клавиатура или мышь</option><option>Колонки</option><option>Другой вопрос</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Ваше сообщение..." class="w-full bg-slate-900/70 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-violet-400 focus:shadow-[0_0_0_4px_rgba(139,92,246,.2)] transition"></textarea>
+      <button class="btn-wa w-full rounded-xl py-3.5 font-semibold text-white">Отправить в WhatsApp</button>
+    </form>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

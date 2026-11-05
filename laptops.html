@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ноутбуки — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <section class="grid lg:grid-cols-2 gap-10 items-center mb-16">
+    <div>
+      <h1 class="reveal text-4xl sm:text-5xl font-black">Ноутбуки <span class="gradient-text">для любых задач</span></h1>
+      <p class="reveal mt-5 text-slate-300 text-lg" data-delay="100">От лёгких ультрабуков для учёбы до мощных рабочих станций для монтажа и 3D. Быстрые, тонкие и с отличной автономностью.</p>
+      <div class="reveal mt-6 grid grid-cols-3 gap-3" data-delay="200">
+        <div class="glass spot rounded-2xl p-4 text-center"><div class="text-2xl font-extrabold text-cyan-300">18 ч</div><div class="text-xs text-slate-400">работы</div></div>
+        <div class="glass spot rounded-2xl p-4 text-center"><div class="text-2xl font-extrabold text-cyan-300">OLED</div><div class="text-xs text-slate-400">экраны</div></div>
+        <div class="glass spot rounded-2xl p-4 text-center"><div class="text-2xl font-extrabold text-cyan-300">2 года</div><div class="text-xs text-slate-400">гарантия</div></div>
+      </div>
+    </div>
+    <div class="reveal-right flex justify-center"><div class="relative w-full max-w-md"><div class="absolute inset-6 rounded-full bg-violet-600/30 blur-3xl"></div><div class="relative floaty" data-show="laptop,#8b5cf6,#22d3ee,0"></div></div></div>
+  </section>
+  <div data-products data-cat="laptops" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

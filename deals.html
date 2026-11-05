@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Акции — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <section class="reveal relative overflow-hidden rounded-[2rem] btn-primary p-8 sm:p-14 text-center mb-14">
+    <h1 class="text-4xl sm:text-5xl font-black">🔥 Горячие акции</h1>
+    <p class="mt-3 text-white/90">Скидки до 20% — предложение ограничено по времени!</p>
+    <div class="mt-8 flex justify-center gap-2.5 sm:gap-5">
+      <div class="bg-black/30 rounded-2xl w-[72px] sm:w-24 py-4"><div id="tD" class="text-3xl sm:text-4xl font-extrabold">00</div><div class="text-xs">дней</div></div>
+      <div class="bg-black/30 rounded-2xl w-[72px] sm:w-24 py-4"><div id="tH" class="text-3xl sm:text-4xl font-extrabold">00</div><div class="text-xs">часов</div></div>
+      <div class="bg-black/30 rounded-2xl w-[72px] sm:w-24 py-4"><div id="tM" class="text-3xl sm:text-4xl font-extrabold">00</div><div class="text-xs">минут</div></div>
+      <div class="bg-black/30 rounded-2xl w-[72px] sm:w-24 py-4"><div id="tS" class="text-3xl sm:text-4xl font-extrabold">00</div><div class="text-xs">секунд</div></div>
+    </div>
+  </section>
+  <div data-products data-cat="sale" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+</main>
+<script src="app.js"></script>
+<script>
+  // Таймер: 7 дней от первого визита, потом запускается заново
+  let end = 0;
+  try { end = +localStorage.getItem('saleEnd'); } catch (e) {}
+  if (!end || end < Date.now()) { end = Date.now() + 7 * 864e5; try { localStorage.setItem('saleEnd', end); } catch (e) {} }
+  const pad = n => String(n).padStart(2, '0');
+  (function tick() {
+    const d = Math.max(0, end - Date.now());
+    document.getElementById('tD').textContent = pad(Math.floor(d / 864e5));
+    document.getElementById('tH').textContent = pad(Math.floor(d % 864e5 / 36e5));
+    document.getElementById('tM').textContent = pad(Math.floor(d % 36e5 / 6e4));
+    document.getElementById('tS').textContent = pad(Math.floor(d % 6e4 / 1e3));
+    setTimeout(tick, 1000);
+  })();
+</script>
+</body>
+</html>

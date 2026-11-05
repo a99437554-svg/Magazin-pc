@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Мониторы — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <section class="grid lg:grid-cols-2 gap-10 items-center mb-16">
+    <div>
+      <h1 class="reveal text-4xl sm:text-5xl font-black">Мониторы с <span class="gradient-text">яркой картинкой</span></h1>
+      <p class="reveal mt-5 text-slate-300 text-lg" data-delay="100">Офисные, игровые и ультраширокие мониторы. Высокая частота обновления, точные цвета и проверка на битые пиксели при покупке.</p>
+      <div class="reveal mt-6 flex flex-wrap gap-3" data-delay="200">
+        <span class="glass rounded-full px-4 py-2 text-sm">📺 4K Ultra HD</span><span class="glass rounded-full px-4 py-2 text-sm">⚡ до 165 Гц</span><span class="glass rounded-full px-4 py-2 text-sm">🌈 HDR</span><span class="glass rounded-full px-4 py-2 text-sm">🛡️ 2 года гарантии</span>
+      </div>
+    </div>
+    <div class="reveal-right flex justify-center"><div class="relative w-full max-w-md"><div class="absolute inset-6 rounded-full bg-cyan-600/30 blur-3xl"></div><div class="relative floaty" data-show="monitor,#06b6d4,#a855f7,1"></div></div></div>
+  </section>
+  <div data-products data-cat="monitors" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Каталог — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <div class="reveal text-center mb-10">
+    <h1 class="text-4xl sm:text-5xl font-black">Каталог <span class="gradient-text">товаров</span></h1>
+    <p class="text-slate-400 mt-3">Выбирайте, ищите и сортируйте. Нажмите на товар — откроется подробная карточка</p>
+  </div>
+
+  <div class="reveal glass rounded-3xl p-4 sm:p-6 mb-10 flex flex-col xl:flex-row gap-4 xl:items-center xl:justify-between">
+    <div id="filters" class="flex flex-wrap gap-2">
+      <button data-f="all" class="chip active glass rounded-full px-4 py-2 text-sm font-medium">Все</button>
+      <button data-f="laptops" class="chip glass rounded-full px-4 py-2 text-sm font-medium">💻 Ноутбуки</button>
+      <button data-f="gaming" class="chip glass rounded-full px-4 py-2 text-sm font-medium">🎮 Игровые ПК</button>
+      <button data-f="monitors" class="chip glass rounded-full px-4 py-2 text-sm font-medium">🖥️ Мониторы</button>
+      <button data-f="keyboards" class="chip glass rounded-full px-4 py-2 text-sm font-medium">⌨️ Клавиатуры</button>
+      <button data-f="mice" class="chip glass rounded-full px-4 py-2 text-sm font-medium">🖱️ Мышки</button>
+      <button data-f="audio" class="chip glass rounded-full px-4 py-2 text-sm font-medium">🔊 Колонки</button>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <input id="search" type="search" placeholder="🔍 Поиск по названию..." class="bg-slate-900/70 border border-white/10 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-violet-400 transition w-full sm:w-64">
+      <select id="sort" class="bg-slate-900/70 border border-white/10 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-violet-400">
+        <option value="">Сортировка</option><option value="asc">Сначала дешёвые</option><option value="desc">Сначала дорогие</option>
+      </select>
+    </div>
+  </div>
+
+  <div data-products data-cat="all" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

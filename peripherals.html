@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Клавиатуры и мыши — TechNova</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+  <section class="text-center mb-14">
+    <h1 class="reveal text-4xl sm:text-5xl font-black">Клавиатуры и <span class="gradient-text">мышки</span></h1>
+    <p class="reveal mt-4 text-slate-400 max-w-2xl mx-auto" data-delay="100">Механические, беспроводные и игровые. Можно подержать в руках и проверить в магазине.</p>
+    <div class="mt-8 flex justify-center items-center gap-4">
+      <div class="w-56 sm:w-80 floaty" data-show="keyboard,#8b5cf6,#22d3ee,0"></div>
+      <div class="w-24 sm:w-40 floaty" style="animation-delay:-2s" data-show="mouse,#ec4899,#f59e0b,0"></div>
+    </div>
+  </section>
+
+  <h2 class="reveal text-2xl sm:text-3xl font-extrabold mb-6">⌨️ <span class="gradient-text">Клавиатуры</span></h2>
+  <div data-products data-cat="keyboards" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"></div>
+
+  <h2 class="reveal text-2xl sm:text-3xl font-extrabold mb-6">🖱️ <span class="gradient-text">Мышки</span></h2>
+  <div data-products data-cat="mice" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
